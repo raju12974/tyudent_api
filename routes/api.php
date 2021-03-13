@@ -3,6 +3,7 @@
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\HomeworkController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\TimetableController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,4 @@ Route::post('add/test', [TestController::class, 'add_test']);
 Route::get('get/tests', [TestController::class, 'get_tests']);
 Route::get('get/teacher/classes', [AttendanceController::class, 'get_teacher_sections']);
 Route::get('get/homeworks', [HomeworkController::class, 'get_homeworks']);
+Route::get('get/timetable', [TimetableController::class, 'get_time_table']);
