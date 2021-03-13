@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Homework extends Model
 {
     use HasFactory;
+    protected $hidden = ['created_at', 'updated_at'];
+
+    public function class_teacher(){
+        return $this->belongsTo(ClassTeacher::class);
+    }
 }
