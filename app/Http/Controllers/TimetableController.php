@@ -23,7 +23,6 @@ class TimetableController extends Controller
             $session->section_id = $session->class_teacher->section_id;
             $session->subject_name = $session->class_teacher->subject->name;
             $session->subject_id = $session->class_teacher->subject_id;
-
             $session->start_time = Carbon::parse($session->slot->start_time)->format('H:i A');
             $session->end_time = Carbon::parse($session->slot->end_time)->format('H:i A');
             unset($session['slot']);
